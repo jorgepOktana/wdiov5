@@ -118,7 +118,7 @@ exports.config = {
     // Set a base URL in order to shorten url command calls. If your url parameter starts
     // with "/", then the base url gets prepended.
     //baseUrl: 'http://localhost:8080',
-    baseUrl: 'http://www.phptravels.net',
+    baseUrl: '',
     waitforTimeout: 90000,            // Default timeout for all waitFor* commands.
     connectionRetryTimeout: 90000,    // Default timeout in milliseconds for request  if Selenium Grid doesn't send response
     connectionRetryCount: 3,          // Default request retries count
@@ -153,7 +153,8 @@ exports.config = {
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
         requireModule: ['@babel/register'],
-        require: ['./test/stepDefinitions/given.js', './test/stepDefinitions/when.js', './test/stepDefinitions/then.js'],   // <string[]> (file/dir) require files before executing features
+        require: ['./test/stepDefinitions/mysteps.js'],
+        // require: ['./test/stepDefinitions/given.js', './test/stepDefinitions/when.js', './test/stepDefinitions/then.js'],   // <string[]> (file/dir) require files before executing features
         backtrace: true,    // <boolean> show full backtrace for errors
         //compiler: ['js:babel-core/register'], // <string[]> filetype:compiler used for processing required features
         compiler: [], // <string[]> filetype:compiler used for processing required features
