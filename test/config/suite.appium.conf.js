@@ -1,5 +1,5 @@
-const defaultTimeoutInterval = process.env.DEBUG ? (60 * 60 * 500) : 90000;
-const {join } = require('path');
+var defaultTimeoutInterval = process.env.DEBUG ? (60 * 60 * 500) : 90000;
+// var { join } = require('path');
 exports.config = {
 
     specs: [
@@ -117,7 +117,7 @@ exports.config = {
       ['junit', {
           outputDir: './test/reports/junit-results/',
           outputFileFormat: function(opts) { // optional
-              return `results-${opts.cid}.${opts.capabilities}.xml`
+              return 'results-${opts.cid}.${opts.capabilities}.xml'
           }
         }
       ],
@@ -169,7 +169,7 @@ exports.config = {
       /**
        * Setup the Chai assertion framework
        */
-      const chai    = require('chai');
+      var chai    = require('chai');
       global.expect = chai.expect;
       global.assert = chai.assert;
       global.should = chai.should();
